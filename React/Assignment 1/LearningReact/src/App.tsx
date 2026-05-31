@@ -24,7 +24,7 @@ function App() {
     }
   ]
 
-  const nameCards = developers.map((developer: Developer) => <NameCard key={developer.name} name={developer.name} favLanguage={developer.favLanguage} yearsCoding={developer.yearsCoding} bio={developer.bio}/>)
+  const nameCards = developers.map((developer) => <NameCard key={developer.name} name={developer.name} favLanguage={developer.favLanguage} yearsCoding={developer.yearsCoding} bio={developer.bio}/>)
 
   return (
     <div>
