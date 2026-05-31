@@ -17,6 +17,11 @@
     width: clamp(280px, 40vw, 420px);
     box-sizing: border-box;
     min-height: 280px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .cardIcon {

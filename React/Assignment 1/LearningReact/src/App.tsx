@@ -1,13 +1,7 @@
 import './App.css'
 import NameCard from './components/NameCard.tsx'
 import NavBar from './components/NavBar.tsx'
-
-type Developer = {
-    name?: string;
-    favLanguage?: string;
-    yearsCoding?: number;
-    bio?: string;
-};
+import type Developer from './types/types.ts';
 
 function App() {
   const developers: Developer[] = [

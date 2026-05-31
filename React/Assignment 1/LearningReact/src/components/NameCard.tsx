@@ -1,20 +1,14 @@
 import { useState } from 'react'
 import "./NameCard.css"
 import avatar from '../assets/avatar.png';
-
-type NameCardProps = {
-    name?: string;
-    favLanguage?: string;
-    yearsCoding?: number;
-    bio?: string;
-};
+import type Developer from '../types/types';
 
 function NameCard({ //PROPS
   name = "Unknown", 
   favLanguage = "Unknown", 
   yearsCoding = 0,
   bio = "None"
-}: NameCardProps) {
+}: Developer) {
     const [visible, setVisible] = useState(false);
 
   return ( //COMPONENT
