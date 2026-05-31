@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <section className="outer">
             <div className="nav">
-                <img src={logo} alt="Logo" className="logo"></img>
+                <img src={logo} alt="Logo" className="logo"/>
                 <h1>Developer Portal</h1>
             </div>
             <div className="navlinks">
