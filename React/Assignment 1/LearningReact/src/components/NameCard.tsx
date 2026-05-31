@@ -1,22 +1,36 @@
 import { useState } from 'react'
+import "./NameCard.css"
+import avatar from '../assets/avatar.png';
+
+type NameCardProps = {
+    name?: string;
+    favLanguage?: string;
+    yearsCoding?: number;
+    bio?: string;
+};
 
 function NameCard({ //PROPS
-  name = "Joshua", 
-  favLanguage = "JavaScript", 
-  yearsCoding = 10
-}) {
+  name = "Unknown", 
+  favLanguage = "Unknown", 
+  yearsCoding = 0,
+  bio = "None"
+}: NameCardProps) {
     const [visible, setVisible] = useState(false);
-    const className = visible ? "" : "hidden";
 
   return ( //COMPONENT
-    <div>
-      <h1>Name: {name}</h1>
-      <h2>Favorite Language: {favLanguage}</h2>
-      <button
+    <div className="card">
+      <img src={avatar} alt="Avatar" className="cardIcon"></img>
+      <h1 className="cardName">{name}</h1>
+      <h2 className="cardText">Favorite Language: {favLanguage}</h2>
+      <h2 className="cardText">Years Coding: {yearsCoding}</h2>
+      <div className="center">
+        <button
         type="button"
         onClick={() => setVisible((visible) => !visible)}
-      >See More</button>
-      <h2 className={className}>Years Coding: {yearsCoding}</h2>
+        className="cardButton"
+      >{visible ? "See Less" : "See More"}</button>
+      </div>
+      <p className={visible ? "cardBio" : "hidden"}>{bio}</p>
     </div>
   );
 }

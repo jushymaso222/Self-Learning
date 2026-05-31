@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 5em;
+    width: 80%;
+    padding: 0.2em;
+}
+
+.outer {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: linear-gradient(to top, #341a49, #3c2d50);
+    box-shadow: 0 10px 100vh rgb(169, 145, 255);
+}
+
+.nav>h1 {
+    color: ivory;
+    font-size: 20pt;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+    width: 4em;
+    height: 4em;
+    padding-right: 1em;
+}
+
+.navlinks {
+    display: flex;
+    font-size: 18pt;
+    gap: 1em;
+}
+
+.navlinks>p:hover {
+    color: white;
+    cursor: pointer;
+}

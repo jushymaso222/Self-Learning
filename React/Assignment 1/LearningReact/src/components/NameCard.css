@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hidden {
+  display: none;
+}
+
+.card {
+    border: 0.2em solid transparent;
+    border-radius: 1.5em;
+    background:
+        linear-gradient(#1f1f1f, #252424) padding-box,
+        linear-gradient(to bottom right, purple, cyan) border-box;
+    margin: 1em;
+    padding: 1em;
+    font-family: "Asap", sans-serif;
+    font-size: 16pt;
+    width: clamp(280px, 40vw, 420px);
+    box-sizing: border-box;
+    min-height: 280px;
+}
+
+.cardIcon {
+    width: 5em;
+    height: 5em;
+}
+
+.cardName {
+    color: rgb(64, 147, 180);
+}
+
+.cardText {
+    color: gray;
+}
+
+.cardBio {
+    padding-top: 0.25em;
+    border-top: 1px solid gray;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 135deg;
+  inherits: false;
+}
+
+.cardButton {
+  --angle: 135deg;
+
+  transition: --angle 1s ease, color 1s ease;
+
+  font-family: "Asap", sans-serif;
+  height: 2.5em;
+  width: 9em;
+  border: 0.2em solid transparent;
+  border-radius: 1.5em;
+  margin-bottom: 1em;
+  background:
+    linear-gradient(to right, #6d6565, #3f424e) padding-box,
+    linear-gradient(var(--angle), purple, cyan) border-box;
+}
+
+.cardButton:hover {
+  --angle: 315deg;
+  color: rgb(110, 158, 219);
+  cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
